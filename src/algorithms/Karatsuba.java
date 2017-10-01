@@ -83,7 +83,7 @@ public class Karatsuba {
             }
         }
 
-        for(int i = 0; i< b.size(); i++){
+        for(int i = 0; i < b.size(); i++){
             a.set(i+k, a.get(i+k) + b.get(i));
         }
         normalize(a);

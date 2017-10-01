@@ -29,6 +29,7 @@ public class Picnic {
 		}
     }
 
+
     public int areEveryoneCouple(){
         int nextMatch = -1;
         for(int i = 0;i < numOfStudents; i++){

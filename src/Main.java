@@ -1,21 +1,27 @@
-import algorithms.FenceChopping;
+import algorithms.Dunibal;
+import algorithms.Quantization;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        List<Integer> heightList = new ArrayList<>();
+        int [][] path = {
+                {0,1,1,1,0},
+                {1,0,0,0,1},
+                {1,0,0,0,0},
+                {1,0,0,0,0},
+                {0,1,0,0,0},
+        };
 
-        heightList.add(7);
-        heightList.add(1);
-        heightList.add(5);
-        heightList.add(9);
-        heightList.add(6);
-        heightList.add(7);
-        heightList.add(3);
+        Dunibal dunibal = new Dunibal(path, 0);
 
-        FenceChopping fence = new FenceChopping(heightList);
-        fence.printResult();
+        System.out.println(dunibal.search(0, 2));
+
+
+
+
     }
 }
+
+

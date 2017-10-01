@@ -40,7 +40,7 @@ public class Clock {
         }
         int ret = INF;
         for(int cnt = 0; cnt < 4; cnt++){
-            ret = Math.min(ret, areEveryClock12Count(swt+1));
+            ret = Math.min(ret, cnt + areEveryClock12Count(swt+1));
             push(swt);
         }
         return ret;
@@ -49,7 +49,10 @@ public class Clock {
     public boolean isAligned() {
         boolean isAligned = true;
         for(int clock = 0 ; clock < clocks.length; clock++){
-            isAligned = false;
+            if(clocks[clock] != 12){
+                isAligned = false;
+                break;
+            }
         }
         return isAligned;
     }

@@ -14,7 +14,7 @@ public class FenceChopping {
         }
         Integer mid = (left + right)/2;
 
-        Integer ret = Math.min(getMaxFenceSize(left, mid), getMaxFenceSize(mid+1, right));
+        Integer ret = Math.max(getMaxFenceSize(left, mid), getMaxFenceSize(mid+1, right));
 
         Integer low = mid;
         Integer high = mid + 1;
